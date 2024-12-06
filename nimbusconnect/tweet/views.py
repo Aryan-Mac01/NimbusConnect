@@ -58,5 +58,5 @@ def register(request):
             login(request, user)
             return redirect('tweet_list')
     else:
-        UserRegistrationForm()
+        form = UserRegistrationForm()
     return render(request, 'registration/register.html', {'form': form})
